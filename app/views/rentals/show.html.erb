@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Rental:</b>
+  <%= @rental.rental_id %>
+</p>
+
+<p>
+  <b>Movie:</b>
+  <%= @rental.movie_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_rental_path(@rental) %> |
+<%= link_to 'Back', rentals_path %>

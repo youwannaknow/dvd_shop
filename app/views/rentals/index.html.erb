@@ -1,0 +1,25 @@
+<h1>Listing rentals</h1>
+
+<table>
+  <tr>
+    <th>Rental</th>
+    <th>Movie</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rentals.each do |rental| %>
+  <tr>
+    <td><%= rental.rental_id %></td>
+    <td><%= rental.movie_id %></td>
+    <td><%= link_to 'Show', rental %></td>
+    <td><%= link_to 'Edit', edit_rental_path(rental) %></td>
+    <td><%= link_to 'Destroy', rental, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rental', new_rental_path %>
